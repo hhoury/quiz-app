@@ -40,12 +40,12 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                   fontSize: 24,
                   fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 30),
-            ...currentQuestion.getShuffledAnswers().map(
-                  (answer) => AnswerButton(() {
-                    answerQuestion(answer);
-                  }, answer),
-                )
+            const SizedBox(height: 40),
+            ...currentQuestion.shuffledAnswers.map(
+              (answer) => AnswerButton(() {
+                answerQuestion(answer);
+              }, answer),
+            )
           ],
         ),
       ),
